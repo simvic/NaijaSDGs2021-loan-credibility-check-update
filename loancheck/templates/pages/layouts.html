@@ -18,6 +18,9 @@
     <link href="{% static 'css/fontello.css' %}" rel="stylesheet">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
+    <!-- Font Awesome CSS -->   
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'>
 </head>
 
 <body>
@@ -74,9 +77,14 @@
                         </li> -->
                         <li class="nav-item">
                              <a class="nav-link " href="loan-check.html">
-                                    Loan credibility check
-                                </a>
+                                Loan credibility check
+                            </a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="" data-toggle="modal" data-target="#loginModal" >
+                                Sign in
+                            </a>
+                       </li>
                     </ul>
                     <div class="search-nav ml-lg-3 ml-0"> <a class="search-btn" role="button" data-toggle="collapse" href="#searchbar" aria-expanded="false"><i class="fa fa-search"></i></a> </div>
                 </div>
@@ -84,99 +92,12 @@
         </nav>
         </div>
     </div>
-
+    
     {% block content %}
 
     {% endblock %}
 
-    <div class="footer section-space100">
-        <!-- footer -->
-        <div class="container ">
-            <div class="row ">
-                <div class="col-xl-4 col-lg-4 d-md-none col-sm-12 col-12  ">
-                    <div class="footer-logo ">
-                        <!-- Footer Logo -->
-                        <img src="images/ft-logo.png " alt="Borrow - Loan Company Website Templates ">
-                    </div>
-                    <!-- /.Footer Logo -->
-                </div>
-                <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 ">
-                    <div class="row ">
-                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 ">
-                            <h3 class="newsletter-title ">Signup Our Newsletter</h3>
-                        </div>
-                        <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12 ">
-                            <div class="newsletter-form">
-                                <!-- Newsletter Form -->
-                                <form action="newsletter.php" method="post">
-                                    <div class="input-group">
-                                        <input type="email" class="form-control border-0 shadow-none" id="newsletter"
-                                         name="newsletter" placeholder="Write E-Mail Address" required>
-                                        <span class="input-group-btn">
-                                            <button class="btn btn-secondary" type="submit">Go!</button>
-                                        </span>
-                                    </div>
-                                    <!-- /input-group -->
-                                </form>
-                            </div>
-                            <!-- /.Newsletter Form -->
-                        </div>
-                    </div>
-                    <!-- /.col-lg-6 -->
-                </div>
-            </div>
-            <hr class="dark-line ">
-            <div class="row ">
-                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 ">
-                    <div class="widget-text mt40 ">
-                        <!-- widget text -->
-                        <p>Our goal at Borrow Loan Company is to provide access to personal loans and education loan, car loan, home loan at insight competitive interest rates. We are the loan provider, you can use our loan eligibility check service.</p>
-                    </div>
-                    <!-- /.widget text -->
-                </div>
-                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6 ">
-                    <div class="widget-footer mt40 ">
-                        <!-- widget footer -->
-                        <ul class="listnone ">
-                            <li><a href="# ">Home</a></li>
-                            <li><a href="# ">Services</a></li>
-                            <li><a href="# ">About Us</a></li>
-                            <li><a href="# ">News</a></li>
-                            <li><a href="# ">Faq</a></li>
-                            <li><a href="# ">Contact Us</a></li>
-                        </ul>
-                    </div>
-                    <!-- /.widget footer -->
-                </div>
-                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6 ">
-                    <div class="widget-footer mt40 ">
-                        <!-- widget footer -->
-                        <ul class="listnone ">
-                            <li><a href="# ">Car Loan</a></li>
-                            <li><a href="# ">Personal Loan</a></li>
-                            <li><a href="# ">Education Loan</a></li>
-                            <li><a href="# ">Business Loan</a></li>
-                            <li><a href="# ">Home Loan</a></li>
-                            <li><a href="# ">Debt Consolidation</a></li>
-                        </ul>
-                    </div>
-                    <!-- /.widget footer -->
-                </div>
-                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6 ">
-                    <div class="widget-social mt40 ">
-                        <!-- widget footer -->
-                        <ul class="listnone ">
-                            <li><a href="#!"><i class="fab fa-facebook-f "></i>Facebook</a></li>
-                            <li><a href="#!"><i class="fab fa-google-plus "></i>Google Plus</a></li>
-                            <li><a href="#!"><i class="fab fa-twitter "></i>Twitter</a></li>
-                            <li><a href="#!"><i class="fab fa-linkedin "></i>Linked In</a></li>
-                        </ul>
-                    </div>
-                    <!-- /.widget footer -->
-                </div>
-            </div>
-        </div>
-    </div>
+
     <!-- /.footer -->
     <div class="tiny-footer">
         <!-- tiny footer -->
@@ -191,10 +112,67 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header border-bottom-0">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-title text-center">
+                <h4>Login</h4>
+              </div>
+              <div class="d-flex flex-column text-center">
+                <form>
+                  <div class="form-group">
+                    <input type="email" class="form-control" id="email1"placeholder="Your email address...">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" class="form-control" id="password1" placeholder="Your password...">
+                  </div>
+                  <button type="button" class="btn btn-info btn-block btn-round">Login</button>
+                </form>
+                
+                <div class="text-center text-muted delimiter">or use a social network</div>
+                <div class="d-flex justify-content-center social-buttons">
+                  <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                  </button>
+                  <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Facebook">
+                    <i class="fab fa-facebook"></i>
+                  </button>
+                  <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Linkedin">
+                    <i class="fab fa-linkedin"></i>
+                  </button>
+                </di>
+              </div>
+            </div>
+          </div>
+            <div class="modal-footer d-flex justify-content-center">
+              <div class="signup-section">Not a member yet? <a href="#a" class="text-info"> Sign Up</a>.</div>
+            </div>
+        </div>
+      </div>
     <!-- /.tiny footer -->
     <!-- back to top icon -->
     <a href="#0" class="far fa-top" title="Go to top">Top</a>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script>
+        $(document).ready(function() {             
+            $('#loginModal').modal('show');
+              $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+              })
+            });
+    </script>
+        <!-- jQuery -->
+    <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
+    <!-- Popper JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>
+    <!-- Bootstrap JS -->
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
     <script src="{% static 'js/jquery.min.js' %}"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="{% static 'js/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
